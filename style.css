@@ -1,0 +1,363 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    background-color: #181717;
+}
+a {
+    color: #f5f5f5;
+    outline: red;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #0d0d0d;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid red;
+}
+header h1 {
+    margin: 0;
+   font-size: 52px;
+   padding-bottom: 5px;
+    color: #f5f5f5;
+;
+}
+.nav {
+    margin-top: 10px;
+}
+.nav a {
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+.mainContainer {
+    padding: 50px 20px;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d0d0db2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+.hero h2 {
+    font-size: 35px;
+    color: #f5f5f5;
+    padding-bottom: 18px;
+
+}
+.hero p {
+    font-size: 1.2em;
+}
+.section {
+    margin: 50px 0;
+    text-align: center;
+}
+.section h2 {
+    color: #f5f5f5;
+    border-bottom: 2px solid red;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.section p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+footer {
+    background-color: #0d0d0d;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid red;
+}
+span {
+    padding: 25px;
+}
+
+/* About Us */
+/* Founder section */
+.founder-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .founder-info img {
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .founder-text {
+    max-width: 800px;
+    margin: 0 auto; /* Center the text block */
+  }
+  
+  .founder-text h3 {
+    color: #f5f5f5;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .founder-text p {
+    color: #f5f5f5;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+/* Frenchie Grid */
+/* Frenchie Grid */
+.frenchie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .frenchie-box {
+    width: calc(33.33% - 20px); /* Adjust for margin */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative; /* Position overlay */
+  }
+  
+  .frenchie-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .frenchie-box:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .mom-dog .overlay,
+  .dad-dog .overlay {
+    background-color: rgba(255, 0, 0, 0.5); /* Red overlay for mom and dad */
+  }
+  
+  .mom-dog .overlay h3,
+  .dad-dog .overlay h3 {
+    font-size: 2em; /* Larger font size for Mom and Dad labels */
+  }
+  
+  .available .overlay {
+    background-color: rgba(0, 128, 0, 0.5); /* Green overlay for available */
+  }
+  
+  .sold .overlay {
+    background-color: rgba(255, 0, 0, 0.5); /* Red overlay for sold */
+  }
+  
+  /* Mobile Styles: Show overlay on tap/click */
+@media (max-width: 768px) {
+    .frenchie-box .overlay {
+      opacity: 0; /* Hide overlay by default on mobile */
+      pointer-events: none; /* Disable pointer events on overlay */
+    }
+  
+    .frenchie-box.show-overlay .overlay {
+      opacity: 1; /* Show overlay when .show-overlay class is present */
+      pointer-events: auto; /* Enable pointer events on overlay */
+    }
+  }
+  /* Add this to your existing style.css or create a new CSS file for blog-specific styles */
+
+/* Blog Grid */
+/* Blog Grid */
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .blog-post {
+    width: calc(100% - 20px); /* Adjust for margin */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative; /* Position overlay */
+    cursor: pointer; /* Add cursor pointer for clickable effect */
+  }
+  
+  .blog-post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .blog-post:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .blog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjusted width */
+    max-width: 90vw; /* Max width relative to viewport */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 80px); /* Adjusted for header and margin */
+  }
+  
+  .blog-post.active .blog-content {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .blog-content h3 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 10px; /* Increased margin-bottom for better separation */
+  }
+  
+  .blog-content p {
+    color: #fff;
+    font-size: 0.9em; /* Reduced font size slightly */
+    line-height: 1.1; /* Increased line-height for better readability */
+    margin-bottom: 15px; /* Increased margin-bottom for better separation */
+  }
+  
+  @media (min-width: 768px) {
+    .blog-post {
+      width: calc(50% - 20px); /* Adjust for margin */
+    }
+  
+    .blog-content {
+      max-width: 80%; /* Adjusted from 100% to 80% for better readability */
+    }
+  }
+ /* Testimonials Section */
+.testimonials {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #363333;
+    border-radius: 10px;
+}
+.testimonials h2 {
+    text-align: center;
+    border-bottom: solid red 3px;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #272525;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .quote {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonial .author {
+    font-weight: bold;
+    color: #e0dada; /* Adjust color to match your theme */
+}
+
+/* Review Form */
+.review-form {
+    margin-top: 30px;
+    background-color: #131212;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.review-form label {
+    font-weight: bold;
+}
+
+.review-form textarea,
+.review-form input[type="text"],
+.review-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.review-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #45a049;
+}
