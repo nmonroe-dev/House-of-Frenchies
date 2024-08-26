@@ -58,3 +58,18 @@ document.getElementById("reviewForm").addEventListener("submit", function(event)
     document.getElementById("reviewerName").value = "";
   });
   
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("https://your-heroku-app.herokuapp.com/reviews")
+      .then(response => response.json())
+      .then(reviews => {
+        const testimonialsSection = document.querySelector('.testimonials');
+        reviews.forEach(review => {
+          const testimonialDiv = document.createElement('div');
+          testimonialDiv.className = 'testimonial';
+          testimonialDiv.innerHTML = `<p class="quote">${review.review}</p><p class="author">${review.name}</p>`;
+          testimonialsSection.appendChild(testimonialDiv);
+        });
+      })
+      .catch(error => console.error('Error fetching reviews:', error));
+  });
+
