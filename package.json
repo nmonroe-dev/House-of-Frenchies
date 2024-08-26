@@ -4,6 +4,7 @@
   "description": "Welcome to the House of Frenchies webpage! This project showcases a website dedicated to French Bulldog enthusiasts, providing information about Frenchies, care tips, testimonials, and a blog.",
   "main": "main.js",
   "scripts": {
+    "start": "node server12.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
