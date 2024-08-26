@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 MongoClient.connect(mongoUrl)
 .then(client => {
     console.log("Connected to Mong");
-    const db = client.db("reviewDatabase");
+    const db = client.db("reviewDatabase1");
     const colloctions = db.collection("reviews");
 
     app.get("/" , (req, res) => {
