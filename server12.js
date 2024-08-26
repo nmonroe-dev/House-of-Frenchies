@@ -6,9 +6,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+
 const PORT = process.env.PORT || 5005;
 const app = express();
 app.set('view engine', 'ejs');
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://house-of-frenchiess.netlify.app/'  
+}));
+
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}))
@@ -35,7 +41,7 @@ MongoClient.connect(mongoUrl)
     });
 
 
-    app.post("/reviews", (req, res) => {
+    app.post("https://my-live-app-84e8b684a076.herokuapp.com/reviews", (req, res) => {
         const data = req.body
         if (!data.name || !data.review) {
             
