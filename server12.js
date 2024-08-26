@@ -41,7 +41,7 @@ MongoClient.connect(mongoUrl)
     });
 
 
-    app.post("https://my-live-app-84e8b684a076.herokuapp.com/reviews", (req, res) => {
+    app.post("/reviews", (req, res) => {
         const data = req.body
         if (!data.name || !data.review) {
             
