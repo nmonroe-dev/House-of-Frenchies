@@ -11,12 +11,13 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
       <h2>Testimonials</h2>
-
+      <% for(let i = 0; i < reviews.length; i++) { %>
       <!-- Testimonial 1 -->
       <div class="testimonial">
-        <p class="quote"></p>
-        <p class="author"></p>
+        <p class="quote"><%= reviews[i].review %></p>
+        <p class="author"><%= reviews[i].name %></p>
       </div>
+      <% } %>
 
       <!-- Review Form -->
       <div class="review-form">
@@ -24,11 +25,11 @@
         <form action="/reviews" method="post">
           <label for="reviewText">Your Review:</label><br />
           <input type="text" placeholder="Type namr here" name="name" />
-          <br />
+          ><br />
 
           <label for="reviewerName">Your Name:</label><br />
           <input type="text" placeholder="Type review here" name="review" />
-          <br />
+          /><br />
 
           <button type="submit">Submit Review</button>
         </form>
